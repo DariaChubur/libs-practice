@@ -16,5 +16,14 @@ import pandas as pd
 # new_dataframe=df["suicide_rate_per100k"] * df["population_millions"]
 # print(new_dataframe)
 
+# df["millions_mult_rate"]= df["suicide_rate_per100k"] * df["population_millions"] * 10
+# print(df[["country", "millions_mult_rate"]])
+
+#guided_practise
+# mask= (df["gdp_per_capita_usd"]<=10000) & (df["mh_system_score"]<5)
+# rich_contry=df[mask]
+#
+# rich_contry["lack_of_care_mln"]=(rich_contry["population_millions"] *rich_contry["treatment_gap_pct"])/100
+# print(rich_contry[["country", "mh_system_score", "lack_of_care_mln"]])
 
 
