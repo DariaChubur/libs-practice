@@ -9,15 +9,23 @@ likes = np.array([1200, 3000, 800, 4100])
 comments = np.array([150, 400, 50, 600])
 
 # TODO:
-
+# total_interactions = likes + comments
+# print(total_interactions)
+# engegement_rate= total_interactions/views * 100
+# print(f"Thr engegement_rate was: {np.round(engegement_rate, 2)}")
+# indices= np.argwhere(engegement_rate ==9)
+# print(indices)
 
 
 # Guided Practice 1
 rpm = np.array([1.5, 2.0, 0.8, 2.5])
 production_cost = np.array([10, 30, 5, 50])
 
-# TODO:
-
+# # TODO:
+# pributok= ((views/100)*rpm)-production_cost
+# print(pributok)
+# indices= np.argwhere(pributok==np.max(pributok))
+# print(indices)
 
 
 # Live Coding 2
@@ -28,8 +36,13 @@ cpu_load = np.array([
 ])
 
 # TODO:
-
-
+# mean_load = np.mean(cpu_load, axis=1)
+# print(mean_load)
+# absolute_max_per_server= np.max(cpu_load, axis=1)
+# print(absolute_max_per_server)
+# critical_loads = cpu_load[cpu_load>90]
+# print(critical_loads)
+# print(critical_loads.size) #кількість елементів
 
 
 
@@ -42,6 +55,13 @@ pings = np.array([
 ])
 
 # TODO:
+# min_time= np.min(pings, axis=1)
+# print(min_time)
+# print(min_time(pings))
+# big_deley= pings[pings>200]
+# print(big_deley)
+# print(big_deley.size)
+
 
 
 
@@ -54,3 +74,5 @@ df = pd.read_csv("datasets/Global_Mental_Health_Crisis_Index_2026.csv")
 print(df.head())
 
 # TODO:
+df["risk_category"] = np.where(df["treatment_gap_pct"]>60, "Hight risk", "Standart" )
+print(df.head())
